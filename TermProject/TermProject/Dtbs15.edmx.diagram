@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="38dadced92fb480ab7b815db59747df1" Name="Diagram1" ZoomLevel="57">
+        <EntityTypeShape EntityType="dtbs15Model.C__MigrationHistory" Width="1.5" PointX="5.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dtbs15Model.AspNetRole" Width="1.5" PointX="5.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="dtbs15Model.AspNetUserClaim" Width="1.5" PointX="10.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="dtbs15Model.AspNetUserLogin" Width="1.5" PointX="10.25" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dtbs15Model.AspNetUser" Width="1.5" PointX="8" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="dtbs15Model.Back_Camera" Width="1.5" PointX="0.75" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="dtbs15Model.Browser" Width="1.5" PointX="0.75" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="dtbs15Model.Category" Width="1.5" PointX="0.75" PointY="12" IsExpanded="true" />
+        <EntityTypeShape EntityType="dtbs15Model.Connectivity" Width="1.5" PointX="0.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dtbs15Model.Display" Width="1.5" PointX="0.75" PointY="17.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="dtbs15Model.Front_Camera" Width="1.5" PointX="0.75" PointY="19.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="dtbs15Model.OperatingSystem" Width="1.5" PointX="0.75" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="dtbs15Model.Processor" Width="1.5" PointX="7.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dtbs15Model.Product" Width="1.5" PointX="3" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="dtbs15Model.RAM" Width="1.5" PointX="0.75" PointY="22.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="dtbs15Model.ROM" Width="1.5" PointX="0.75" PointY="24.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="dtbs15Model.USB" Width="1.5" PointX="0.75" PointY="26.875" IsExpanded="true" />
+        <AssociationConnector Association="dtbs15Model.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="dtbs15Model.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="dtbs15Model.FK_Product_Back_Camera" ManuallyRouted="false" />
+        <AssociationConnector Association="dtbs15Model.FK_Product_Browser" ManuallyRouted="false" />
+        <AssociationConnector Association="dtbs15Model.FK_Product_Category" ManuallyRouted="false" />
+        <AssociationConnector Association="dtbs15Model.FK_Product_Connectivity" ManuallyRouted="false" />
+        <AssociationConnector Association="dtbs15Model.FK_Product_Display" ManuallyRouted="false" />
+        <AssociationConnector Association="dtbs15Model.FK_Product_Front_Camera" ManuallyRouted="false" />
+        <AssociationConnector Association="dtbs15Model.FK_Product_OperatingSystem" ManuallyRouted="false" />
+        <AssociationConnector Association="dtbs15Model.FK_Product_OperatingSystem1" ManuallyRouted="false" />
+        <AssociationConnector Association="dtbs15Model.FK_Product_RAM" ManuallyRouted="false" />
+        <AssociationConnector Association="dtbs15Model.FK_Product_ROM" ManuallyRouted="false" />
+        <AssociationConnector Association="dtbs15Model.FK_Product_USB" ManuallyRouted="false" />
+        <AssociationConnector Association="dtbs15Model.AspNetUserRoles" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
