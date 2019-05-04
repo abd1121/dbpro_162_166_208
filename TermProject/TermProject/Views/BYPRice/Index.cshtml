@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Theme.cshtml";
+}
+
+<h2>Index</h2>
+<a href="@Url.Action("ShowByPrice")">Show by price < 60000 List</a>
+<br />
+<a href="@Url.Action("ShowByBackCamera")">Show by 16MP back Camera List</a>
+<br />
+<a href="@Url.Action("ShowByRam")">By Ram List</a>
+
+<br />
+<a href="@Url.Action("ShowByDisplay")">By Display List</a>
+<br />
+<a href="@Url.Action("ShowByBrowser")">By Browser List</a>
+<br />
+<a href="@Url.Action("ShowByOS")">By OS List</a>
