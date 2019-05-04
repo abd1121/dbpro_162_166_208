@@ -2,31 +2,307 @@
     ViewBag.Title = "Home Page";
     Layout = "~/Views/Shared/_Theme.cshtml";
 }
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @ViewBag.List;
+<section class="hero-area">
+    <div class="hero-slides owl-carousel">
+        <!-- Single Hero Slide -->
+        <div class="single-hero-slide bg-img" style="background-image: url(/../img/bg-img/hero1-01.jpg);">
+            <div class="container h-100">
+                <div class="row h-100 align-items-center">
+                    <div class="col-12">
+                        <div class="hero-slides-content">
+                            <h2 data-animation="fadeInUp" data-delay="100ms">Find your mobile phone</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Single Hero Slide -->
+        <div class="single-hero-slide bg-img" style="background-image: url(/../img/bg-img/hero2-01.jpg);">
+            <div class="container h-100">
+                <div class="row h-100 align-items-center">
+                    <div class="col-12">
+                        <div class="hero-slides-content">
+                            <h2 data-animation="fadeInUp" data-delay="100ms">Find your mobile phone</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Single Hero Slide -->
+        <div class="single-hero-slide bg-img" style="background-image: url(/../img/bg-img/hero3-01.jpg);">
+            <div class="container h-100">
+                <div class="row h-100 align-items-center">
+                    <div class="col-12">
+                        <div class="hero-slides-content">
+                            <h2 data-animation="fadeInUp" data-delay="100ms">Find your mobile phone</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ##### Hero Area End ##### -->
+<!-- ##### Advance Search Area Start ##### -->
+<div class="south-search-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="advanced-search-form">
+                    <!-- Search Title -->
+                    <div class="search-title">
+                        <p>Search your mobile</p>
+                    </div>
+                    <!-- Search Form -->
+                    <form action="#" method="post" id="advanceSearch">
+                        <div class="row">
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+
+                            <div class="col-12 col-md-4 col-lg-3">
+                                <div class="form-group">
+                                    <select class="form-control" data-toggle="select" id="categoryID" name="categoryID" style="height:36px;font-size:small; font-style:italic;">
+                                        <option selected="" value="">Manufacturer Name </option>
+                                        @{
+                                            if (ViewBag.Hos != null)
+                                            {
+                                                foreach (var hh in ViewBag.Hos)
+                                                {
+                                                    <option value=@hh.id>@hh.Manufacturer</option>
+                                                }
+                                            }
+                                        }
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-md-4 col-lg-3">
+                                <div class="form-group">
+                                    <select class="form-control" id="catagories">
+                                        <option>Search by OS</option>
+                                        <option>Andriod Phones</option>
+                                        <option>Symbian phones</option>
+                                        <option>Windows phones</option>
+                                        <option>Smart phones</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-md-4 col-lg-3">
+                                <div class="form-group">
+                                    <select class="form-control" id="offers">
+                                        <option>Search by type</option>
+                                        <option>Camera mobile</option>
+                                        <option>Video recording</option>
+                                        <option>Bluetooth mobile</option>
+                                        <option>Dual sim</option>
+                                        <option>Wireless LAN</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-md-4 col-xl-3">
+                                <div class="form-group">
+                                    <select class="form-control" id="listings">
+                                        <option>Search by Camera</option>
+                                        <option>13 MP</option>
+                                        <option>8 MP</option>
+                                        <option>5 MP</option>
+                                        <option>3 MP</option>
+                                        <option>2 MP</option>
+                                    </select>
+                                </div>
+                            </div>
+
+
+
+
+
+
+                            <div class="col-12 d-flex justify-content-between align-items-end">
+                                <!-- More Filter -->
+                                <!-- Submit -->
+                                <div class="form-group mb-0">
+                                    <button type="submit" class="btn south-btn"><a href="~/Home/Index1/">Search</a></button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
+<!-- ##### Advance Search Area End ##### -->
+<!-- ##### Featured Properties Area Start ##### -->
+<section class="featured-properties-area section-padding-100-50">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="section-heading wow fadeInUp">
+                    <h2>Latest Mobile Phones in Pakistan</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+
+            <!-- Single Featured Property -->
+            <div class="col-12 col-md-6 col-xl-4">
+                <div class="single-featured-property mb-50 wow fadeInUp" data-wow-delay="100ms">
+                    <!-- Property Thumbnail -->
+                    <div class="property-thumb">
+                        <img src="~/Content/theme/img/bg-img/feature1-01.jpg" alt="">
+
+
+                        <div class="list-price">
+                            <p>USD $1304</p>
+                        </div>
+                    </div>
+                    <!-- Property Content -->
+                    <div class="property-content">
+                        <h5>Huawei </h5>
+                        <p class="location">P30 Pro</p>
+                        <p>Rs. 174,999 <br>USD $1304</p>
+
+                        <div class="form-group mb-0">
+                            <button type="submit" class="btn south-btn"><a href="Details.html"> Details</a></button>
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+
+            <!-- Single Featured Property -->
+            <div class="col-12 col-md-6 col-xl-4">
+                <div class="single-featured-property mb-50 wow fadeInUp" data-wow-delay="200ms">
+                    <!-- Property Thumbnail -->
+                    <div class="property-thumb">
+                        <img src="~/Content/theme/img/bg-img/feature2-01.jpg" alt="">
+
+
+                        <div class="list-price">
+                            <p>USD $462</p>
+                        </div>
+                    </div>
+                    <!-- Property Content -->
+                    <div class="property-content">
+                        <h5>Samsung Galaxy</h5>
+                        <p class="location">A70</p>
+                        <p>Rs. 61,999 <br>USD $462</p>
+
+                        <div class="form-group mb-0">
+                            <button type="submit" class="btn south-btn">Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Single Featured Property -->
+            <div class="col-12 col-md-6 col-xl-4">
+                <div class="single-featured-property mb-50 wow fadeInUp" data-wow-delay="200ms">
+                    <!-- Property Thumbnail -->
+                    <div class="property-thumb">
+                        <img src="img/bg-img/feature1-01.jpg" alt="">
+
+
+                        <div class="list-price">
+                            <p>USD $462</p>
+                        </div>
+                    </div>
+                    <!-- Property Content -->
+                    <div class="property-content">
+                        <h5>Samsung Galaxy</h5>
+                        <p class="location">A70</p>
+                        <p>Rs. 61,999 <br>USD $462</p>
+
+                        <div class="form-group mb-0">
+                            <button type="submit" class="btn south-btn">Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Single Featured Property -->
+            <div class="col-12 col-md-6 col-xl-4">
+                <div class="single-featured-property mb-50 wow fadeInUp" data-wow-delay="200ms">
+                    <!-- Property Thumbnail -->
+                    <div class="property-thumb">
+                        <img src="~/Content/theme/img/bg-img/feature2-01.jpg" alt="">
+
+
+                        <div class="list-price">
+                            <p>USD $462</p>
+                        </div>
+                    </div>
+                    <!-- Property Content -->
+                    <div class="property-content">
+                        <h5>Samsung Galaxy</h5>
+                        <p class="location">A70</p>
+                        <p>Rs. 61,999 <br>USD $462</p>
+
+                        <div class="form-group mb-0">
+                            <button type="submit" class="btn south-btn">Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Single Featured Property -->
+            <div class="col-12 col-md-6 col-xl-4">
+                <div class="single-featured-property mb-50 wow fadeInUp" data-wow-delay="200ms">
+                    <!-- Property Thumbnail -->
+                    <div class="property-thumb">
+                        <img src="~/Content/theme/img/bg-img/feature1-01.jpg" alt="">
+
+
+                        <div class="list-price">
+                            <p>USD $462</p>
+                        </div>
+                    </div>
+                    <!-- Property Content -->
+                    <div class="property-content">
+                        <h5>Samsung Galaxy</h5>
+                        <p class="location">A70</p>
+                        <p>Rs. 61,999 <br>USD $462</p>
+
+                        <div class="form-group mb-0">
+                            <button type="submit" class="btn south-btn">Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Single Featured Property -->
+            <div class="col-12 col-md-6 col-xl-4">
+                <div class="single-featured-property mb-50 wow fadeInUp" data-wow-delay="200ms">
+                    <!-- Property Thumbnail -->
+                    <div class="property-thumb">
+                        <img src="~/Content/theme/img/bg-img/feature2-01.jpg" alt="">
+
+
+                        <div class="list-price">
+                            <p>USD $462</p>
+                        </div>
+                    </div>
+                    <!-- Property Content -->
+                    <div class="property-content">
+                        <h5>Samsung Galaxy</h5>
+                        <p class="location">A70</p>
+                        <p>Rs. 61,999 <br>USD $462</p>
+
+                        <div class="form-group mb-0">
+                            <button type="submit" class="btn south-btn">Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>}

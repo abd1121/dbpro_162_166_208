@@ -37,5 +37,15 @@ namespace TermProject.Models
         public System.Data.Entity.DbSet<TermProject.Models.DisplayViewModel> DisplayViewModels { get; set; }
 
         public System.Data.Entity.DbSet<TermProject.Models.OSViewModel> OSViewModels { get; set; }
+
+        public System.Data.Entity.DbSet<TermProject.Models.FrontCameraViewModel> FrontCameraViewModels { get; set; }
+
+        public System.Data.Entity.DbSet<TermProject.Models.FrequencyViewModel> FrequencyViewModels { get; set; }
+
+        public System.Data.Entity.DbSet<TermProject.Models.ProductViewModel> ProductViewModels { get; set; }
+
+        public System.Data.Entity.DbSet<TermProject.Category> Categories { get; set; }
+
+        public System.Data.Entity.DbSet<TermProject.Models.USBViewModel> USBViewModels { get; set; }
     }
 }

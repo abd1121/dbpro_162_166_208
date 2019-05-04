@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\Abdullah Tariq\Desktop\TermProject\TermProject\Dtbs15.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\Abdullah Tariq\Downloads\TermProject (1)\TermProject\TermProject\Dtbs15.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

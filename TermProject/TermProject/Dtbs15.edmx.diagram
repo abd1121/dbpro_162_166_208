@@ -36,6 +36,15 @@
         <AssociationConnector Association="dtbs15Model.FK_Product_ROM" ManuallyRouted="false" />
         <AssociationConnector Association="dtbs15Model.FK_Product_USB" ManuallyRouted="false" />
         <AssociationConnector Association="dtbs15Model.AspNetUserRoles" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="dtbs15Model.By_Brand" Width="1.5" PointX="3.375" PointY="9.75" />
+        <EntityTypeShape EntityType="dtbs15Model.Price_60000" Width="1.5" PointX="5.375" PointY="9.75" />
+        <EntityTypeShape EntityType="dtbs15Model.View_Name" Width="1.5" PointX="7.375" PointY="9.75" />
+        <EntityTypeShape EntityType="dtbs15Model.BY_BackCamera" Width="1.5" PointX="9.375" PointY="9.75" />
+        <EntityTypeShape EntityType="dtbs15Model.BY_BackCamera16MP" Width="1.5" PointX="10.375" PointY="6.75" />
+        <EntityTypeShape EntityType="dtbs15Model.By_Browser" Width="1.5" PointX="11.375" PointY="9.75" />
+        <EntityTypeShape EntityType="dtbs15Model.By_Display" Width="1.5" PointX="12.375" PointY="0.75" />
+        <EntityTypeShape EntityType="dtbs15Model.By_OS" Width="1.5" PointX="12.375" PointY="3.75" />
+        <EntityTypeShape EntityType="dtbs15Model.BY_RAM" Width="1.5" PointX="3.375" PointY="12.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

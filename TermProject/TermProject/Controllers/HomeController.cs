@@ -10,7 +10,29 @@ namespace TermProject.Controllers
     {
         public ActionResult Index()
         {
+            dtbs15Entities db = new dtbs15Entities();
+
+
+            List<Category> h = db.Categories.ToList();
+            
+            ViewBag.Hos = h;
+            
+            
             return View();
+        }
+
+        public ActionResult Index1(int id)
+        {
+            dtbs15Entities db = new dtbs15Entities();
+
+
+
+           
+            var product = from s in db.Products select s;
+            product = product.Where(s => s.CategoryId == id);
+
+
+            return View(product.ToList());
         }
         public ActionResult Test()
         {
@@ -33,5 +55,11 @@ namespace TermProject.Controllers
         {
             return View();
         }
+        public ActionResult ManageSpecs()
+        {
+            return View();
+        }
+
+
     }
 }

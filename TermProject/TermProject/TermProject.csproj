@@ -44,6 +44,54 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Design, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.CrystalReports.TemplateEngine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.Data.AdoDotNetInterop, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Enterprise.Viewing.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.ClientDoc, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CommonControls, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CommonObjectModel, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.Controllers, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CubeDefModel, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.DataDefModel, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.DataSetConversion, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportAppServer.ObjectFactory, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.Prompting, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.ReportDefModel, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.XmlSerialize, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.VSDesigner, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Web, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.1\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
       <Private>True</Private>
@@ -209,10 +257,79 @@
     <Compile Include="AspNetUserLogin.cs">
       <DependentUpon>Dtbs15.tt</DependentUpon>
     </Compile>
+    <Compile Include="BackCamera.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BackCamera.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Back_Camera.cs">
       <DependentUpon>Dtbs15.tt</DependentUpon>
     </Compile>
     <Compile Include="Browser.cs">
+      <DependentUpon>Dtbs15.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ByBackCamera.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ByBackCamera.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="byBrand.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>byBrand.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ByBrowser.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ByBrowser.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ByDisplay.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ByDisplay.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ByOS.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ByOS.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BYPRICE.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BYPRICE.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ByRam.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ByRam.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BY_BackCamera.cs">
+      <DependentUpon>Dtbs15.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BY_BackCamera16MP.cs">
+      <DependentUpon>Dtbs15.tt</DependentUpon>
+    </Compile>
+    <Compile Include="By_Brand.cs">
+      <DependentUpon>Dtbs15.tt</DependentUpon>
+    </Compile>
+    <Compile Include="By_Browser.cs">
+      <DependentUpon>Dtbs15.tt</DependentUpon>
+    </Compile>
+    <Compile Include="By_Display.cs">
+      <DependentUpon>Dtbs15.tt</DependentUpon>
+    </Compile>
+    <Compile Include="By_OS.cs">
+      <DependentUpon>Dtbs15.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BY_RAM.cs">
       <DependentUpon>Dtbs15.tt</DependentUpon>
     </Compile>
     <Compile Include="Category.cs">
@@ -223,6 +340,8 @@
     </Compile>
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BackCameraController.cs" />
+    <Compile Include="Controllers\ByBAckCameraController.cs" />
+    <Compile Include="Controllers\BYPRiceController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\ConnectivityController.cs" />
     <Compile Include="Controllers\DisplayController.cs" />
@@ -230,8 +349,10 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\OperatinSystemController.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\RAMController.cs" />
     <Compile Include="Controllers\ROMController.cs" />
+    <Compile Include="Controllers\USBController.cs" />
     <Compile Include="C__MigrationHistory.cs">
       <DependentUpon>Dtbs15.tt</DependentUpon>
     </Compile>
@@ -275,7 +396,13 @@
     <Compile Include="Models\RamViewModel.cs" />
     <Compile Include="Models\RomViewModel.cs" />
     <Compile Include="Models\USBViewModel.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="OperatingSystem.cs">
+      <DependentUpon>Dtbs15.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Price_60000.cs">
       <DependentUpon>Dtbs15.tt</DependentUpon>
     </Compile>
     <Compile Include="Processor.cs">
@@ -295,8 +422,85 @@
     <Compile Include="USB.cs">
       <DependentUpon>Dtbs15.tt</DependentUpon>
     </Compile>
+    <Compile Include="View_Name.cs">
+      <DependentUpon>Dtbs15.tt</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bin\Antlr3.Runtime.dll" />
+    <Content Include="bin\Antlr3.Runtime.pdb" />
+    <Content Include="bin\EntityFramework.dll" />
+    <Content Include="bin\EntityFramework.SqlServer.dll" />
+    <Content Include="bin\EntityFramework.SqlServer.xml" />
+    <Content Include="bin\EntityFramework.xml" />
+    <Content Include="bin\Microsoft.AI.Agent.Intercept.dll" />
+    <Content Include="bin\Microsoft.AI.DependencyCollector.dll" />
+    <Content Include="bin\Microsoft.AI.DependencyCollector.xml" />
+    <Content Include="bin\Microsoft.AI.PerfCounterCollector.dll" />
+    <Content Include="bin\Microsoft.AI.ServerTelemetryChannel.dll" />
+    <Content Include="bin\Microsoft.AI.ServerTelemetryChannel.xml" />
+    <Content Include="bin\Microsoft.AI.Web.dll" />
+    <Content Include="bin\Microsoft.AI.Web.xml" />
+    <Content Include="bin\Microsoft.AI.WindowsServer.dll" />
+    <Content Include="bin\Microsoft.AI.WindowsServer.xml" />
+    <Content Include="bin\Microsoft.ApplicationInsights.dll" />
+    <Content Include="bin\Microsoft.ApplicationInsights.xml" />
+    <Content Include="bin\Microsoft.AspNet.Identity.Core.dll" />
+    <Content Include="bin\Microsoft.AspNet.Identity.Core.xml" />
+    <Content Include="bin\Microsoft.AspNet.Identity.EntityFramework.dll" />
+    <Content Include="bin\Microsoft.AspNet.Identity.EntityFramework.xml" />
+    <Content Include="bin\Microsoft.AspNet.Identity.Owin.dll" />
+    <Content Include="bin\Microsoft.AspNet.Identity.Owin.xml" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
+    <Content Include="bin\Microsoft.Owin.dll" />
+    <Content Include="bin\Microsoft.Owin.Host.SystemWeb.dll" />
+    <Content Include="bin\Microsoft.Owin.Host.SystemWeb.xml" />
+    <Content Include="bin\Microsoft.Owin.Security.Cookies.dll" />
+    <Content Include="bin\Microsoft.Owin.Security.Cookies.xml" />
+    <Content Include="bin\Microsoft.Owin.Security.dll" />
+    <Content Include="bin\Microsoft.Owin.Security.Facebook.dll" />
+    <Content Include="bin\Microsoft.Owin.Security.Facebook.xml" />
+    <Content Include="bin\Microsoft.Owin.Security.Google.dll" />
+    <Content Include="bin\Microsoft.Owin.Security.Google.xml" />
+    <Content Include="bin\Microsoft.Owin.Security.MicrosoftAccount.dll" />
+    <Content Include="bin\Microsoft.Owin.Security.MicrosoftAccount.xml" />
+    <Content Include="bin\Microsoft.Owin.Security.OAuth.dll" />
+    <Content Include="bin\Microsoft.Owin.Security.OAuth.xml" />
+    <Content Include="bin\Microsoft.Owin.Security.Twitter.dll" />
+    <Content Include="bin\Microsoft.Owin.Security.Twitter.xml" />
+    <Content Include="bin\Microsoft.Owin.Security.xml" />
+    <Content Include="bin\Microsoft.Owin.xml" />
+    <Content Include="bin\Microsoft.Web.Infrastructure.dll" />
+    <Content Include="bin\Newtonsoft.Json.dll" />
+    <Content Include="bin\Newtonsoft.Json.xml" />
+    <Content Include="bin\Owin.dll" />
+    <Content Include="bin\roslyn\csc.exe" />
+    <Content Include="bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll" />
+    <Content Include="bin\roslyn\System.Collections.Immutable.dll" />
+    <Content Include="bin\roslyn\System.Reflection.Metadata.dll" />
+    <Content Include="bin\roslyn\vbc.exe" />
+    <Content Include="bin\roslyn\VBCSCompiler.exe" />
+    <Content Include="bin\System.Web.Helpers.dll" />
+    <Content Include="bin\System.Web.Helpers.xml" />
+    <Content Include="bin\System.Web.Mvc.dll" />
+    <Content Include="bin\System.Web.Mvc.xml" />
+    <Content Include="bin\System.Web.Optimization.dll" />
+    <Content Include="bin\System.Web.Optimization.xml" />
+    <Content Include="bin\System.Web.Razor.dll" />
+    <Content Include="bin\System.Web.Razor.xml" />
+    <Content Include="bin\System.Web.WebPages.Deployment.dll" />
+    <Content Include="bin\System.Web.WebPages.Deployment.xml" />
+    <Content Include="bin\System.Web.WebPages.dll" />
+    <Content Include="bin\System.Web.WebPages.Razor.dll" />
+    <Content Include="bin\System.Web.WebPages.Razor.xml" />
+    <Content Include="bin\System.Web.WebPages.xml" />
+    <Content Include="bin\TermProject.dll" />
+    <Content Include="bin\TermProject.pdb" />
+    <Content Include="bin\WebGrease.dll" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\style.css" />
@@ -378,6 +582,15 @@
     <Content Include="Content\theme\js\plugins.js" />
     <Content Include="Content\theme\js\popper.min.js" />
     <Content Include="Content\theme\style.css" />
+    <Content Include="css\animate.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\classy-nav.min.css" />
+    <Content Include="css\font-awesome.min.css" />
+    <Content Include="css\jquery-ui.min.css" />
+    <Content Include="css\magnific-popup.css" />
+    <Content Include="css\nice-select.css" />
+    <Content Include="css\owl.carousel.css" />
+    <Content Include="css\themify-icons.css" />
     <Content Include="Dtbs15.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Dtbs15.edmx</DependentUpon>
@@ -392,6 +605,78 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="img\bg-img\about.jpg" />
+    <Content Include="img\bg-img\cta.jpg" />
+    <Content Include="img\bg-img\editor.jpg" />
+    <Content Include="img\bg-img\fea-product.jpg" />
+    <Content Include="img\bg-img\feature1-01.jpg" />
+    <Content Include="img\bg-img\feature1.jpg" />
+    <Content Include="img\bg-img\feature2-01.jpg" />
+    <Content Include="img\bg-img\feature2.jpg" />
+    <Content Include="img\bg-img\feature3.jpg" />
+    <Content Include="img\bg-img\feature4-01.jpg" />
+    <Content Include="img\bg-img\feature4.jpg" />
+    <Content Include="img\bg-img\feature5-01.jpg" />
+    <Content Include="img\bg-img\feature5.jpg" />
+    <Content Include="img\bg-img\feature6.jpg" />
+    <Content Include="img\bg-img\feature7.jpg" />
+    <Content Include="img\bg-img\feature8.jpg" />
+    <Content Include="img\bg-img\feature9.jpg" />
+    <Content Include="img\bg-img\footer-01.jpg" />
+    <Content Include="img\bg-img\footer.jpg" />
+    <Content Include="img\bg-img\hero1-01.jpg" />
+    <Content Include="img\bg-img\hero1.jpg" />
+    <Content Include="img\bg-img\hero2-01.jpg" />
+    <Content Include="img\bg-img\hero2.jpg" />
+    <Content Include="img\bg-img\hero3-01.jpg" />
+    <Content Include="img\bg-img\hero3.jpg" />
+    <Content Include="img\bg-img\hero4.jpg" />
+    <Content Include="img\bg-img\hero5.jpg" />
+    <Content Include="img\bg-img\listing.jpg" />
+    <Content Include="img\bg-img\team1.jpg" />
+    <Content Include="img\bg-img\team2.jpg" />
+    <Content Include="img\bg-img\team3.jpg" />
+    <Content Include="img\blog-img\blog1.jpg" />
+    <Content Include="img\blog-img\blog2.jpg" />
+    <Content Include="img\blog-img\blog3.jpg" />
+    <Content Include="img\blog-img\c-1.jpg" />
+    <Content Include="img\blog-img\c-2.jpg" />
+    <Content Include="img\blog-img\c-3.jpg" />
+    <Content Include="img\core-img\favicon.ico" />
+    <Content Include="img\core-img\logo-01.png" />
+    <Content Include="img\core-img\logo.png" />
+    <Content Include="img\core-img\signature.png" />
+    <Content Include="img\icons\bathtub.png" />
+    <Content Include="img\icons\envelope.png" />
+    <Content Include="img\icons\flat.png" />
+    <Content Include="img\icons\garage.png" />
+    <Content Include="img\icons\home3.png" />
+    <Content Include="img\icons\house1.png" />
+    <Content Include="img\icons\house2.png" />
+    <Content Include="img\icons\location.png" />
+    <Content Include="img\icons\new.png" />
+    <Content Include="img\icons\new2.png" />
+    <Content Include="img\icons\phone-call.png" />
+    <Content Include="img\icons\prize.png" />
+    <Content Include="img\icons\prize2.png" />
+    <Content Include="img\icons\rent.png" />
+    <Content Include="img\icons\signature.png" />
+    <Content Include="img\icons\space.png" />
+    <Content Include="js\active.js" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\classy-nav.min.js" />
+    <Content Include="js\jquery-ui.min.js" />
+    <Content Include="js\jquery\jquery-2.2.4.min.js" />
+    <Content Include="js\map-active.js" />
+    <Content Include="js\plugins.js" />
+    <Content Include="js\popper.min.js" />
+    <Content Include="obj\Debug\TempPE\Dtbs15.cs.dll" />
+    <Content Include="obj\Debug\TempPE\Dtbs15.Designer.cs.dll" />
+    <Content Include="obj\Debug\TempPE\Model1.cs.dll" />
+    <Content Include="obj\Debug\TempPE\Model1.Designer.cs.dll" />
+    <Content Include="obj\Debug\TermProject.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\TermProject.dll" />
+    <Content Include="obj\Debug\TermProject.pdb" />
     <Content Include="Scripts\ai.0.22.9-build00167.js" />
     <Content Include="Scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -418,6 +703,25 @@
     <Content Include="Dtbs15.edmx.diagram">
       <DependentUpon>Dtbs15.edmx</DependentUpon>
     </Content>
+    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="obj\Debug\edmxResourcesToEmbed\Dtbs15.csdl" />
+    <Content Include="obj\Debug\edmxResourcesToEmbed\Dtbs15.msl" />
+    <Content Include="obj\Debug\edmxResourcesToEmbed\Dtbs15.ssdl" />
+    <Content Include="obj\Debug\edmxResourcesToEmbed\Model1.csdl" />
+    <Content Include="obj\Debug\edmxResourcesToEmbed\Model1.msl" />
+    <Content Include="obj\Debug\edmxResourcesToEmbed\Model1.ssdl" />
+    <Content Include="obj\Debug\TermProject.csprojResolveAssemblyReference.cache" />
+    <Content Include="bin\ApplicationInsights.config" />
+    <Content Include="bin\roslyn\Microsoft.CSharp.Core.targets" />
+    <Content Include="bin\roslyn\Microsoft.VisualBasic.Core.targets" />
+    <Content Include="bin\roslyn\VBCSCompiler.exe.config" />
+    <Content Include="bin\TermProject.dll.config" />
+    <Content Include=".sass-cache\c271f55aaaf7c7f11c38a51797984cacc713c712\style.scssc" />
+    <Content Include=".sass-cache\c271f55aaaf7c7f11c38a51797984cacc713c712\_mixin.scssc" />
+    <Content Include=".sass-cache\c271f55aaaf7c7f11c38a51797984cacc713c712\_responsive.scssc" />
+    <Content Include=".sass-cache\c271f55aaaf7c7f11c38a51797984cacc713c712\_themecolor.scssc" />
+    <Content Include=".sass-cache\c271f55aaaf7c7f11c38a51797984cacc713c712\_theme_color.scssc" />
+    <Content Include=".sass-cache\c271f55aaaf7c7f11c38a51797984cacc713c712\_variables.scssc" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -477,22 +781,38 @@
     <Content Include="Views\Connectivity\Create.cshtml" />
     <Content Include="Views\Connectivity\Index.cshtml" />
     <Content Include="Views\Category\Create.cshtml" />
-    <Content Include="Views\Display\Index.cshtml" />
-    <Content Include="Views\Category\Index.cshtml" />
-    <Content Include="Views\Display\Details.cshtml" />
-    <Content Include="Views\Display\Create.cshtml" />
-    <Content Include="Views\Display\Edit.cshtml" />
-    <Content Include="Views\Display\Delete.cshtml" />
-    <Content Include="Views\RAM\Delete.cshtml" />
-    <Content Include="Views\RAM\Edit.cshtml" />
-    <Content Include="Views\RAM\Create.cshtml" />
-    <Content Include="Views\RAM\Index.cshtml" />
     <Content Include="Views\OperatinSystem\Index.cshtml" />
     <Content Include="Views\OperatinSystem\Create.cshtml" />
     <Content Include="Views\OperatinSystem\Edit.cshtml" />
+    <Content Include="Views\FrontCamera\Edit.cshtml" />
+    <Content Include="Views\Display\Create.cshtml" />
+    <Content Include="Views\Display\Delete.cshtml" />
+    <Content Include="Views\Display\Details.cshtml" />
+    <Content Include="Views\Display\Edit.cshtml" />
+    <Content Include="scss\style.scss" />
+    <Content Include="scss\_mixin.scss" />
+    <Content Include="scss\_responsive.scss" />
+    <Content Include="scss\_theme_color.scss" />
+    <Content Include="scss\_variables.scss" />
+    <Content Include="Views\Connectivity\Edit.cshtml" />
+    <Content Include="Views\Category\Index.cshtml" />
+    <Content Include="Views\Category\Edit.cshtml" />
+    <Content Include="Views\RAM\Create.cshtml" />
+    <Content Include="Views\RAM\Delete.cshtml" />
+    <Content Include="Views\RAM\Edit.cshtml" />
+    <Content Include="Views\RAM\Index.cshtml" />
+    <Content Include="Views\Home\ManageSpecs.cshtml" />
+    <Content Include="Views\Display\Index.cshtml" />
+    <Content Include="Views\Product\Create.cshtml" />
+    <Content Include="Views\Home\Index1.cshtml" />
+    <Content Include="Views\USB\Index.cshtml" />
+    <Content Include="Views\USB\Create.cshtml" />
+    <Content Include="Views\USB\Edit.cshtml" />
+    <Content Include="Views\BYPRice\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\ByBAckCamera\" />
     <Folder Include="Views\ROM\" />
   </ItemGroup>
   <ItemGroup>
@@ -505,6 +825,41 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BackCamera.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>BackCamera.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ByBackCamera.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ByBackCamera.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="byBrand.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>byBrand.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ByBrowser.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ByBrowser.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ByDisplay.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ByDisplay.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ByOS.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ByOS.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BYPRICE.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>BYPRICE.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ByRam.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ByRam.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

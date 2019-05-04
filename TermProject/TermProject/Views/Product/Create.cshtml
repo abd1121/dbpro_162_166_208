@@ -10,7 +10,8 @@
 @using (Html.BeginForm()) 
 {
     @Html.AntiForgeryToken()
-    
+    @ViewBag.List;
+
     <div class="form-horizontal">
         <h4>ProductViewModel</h4>
         <hr />
@@ -24,11 +25,24 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.categoryID, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.categoryID, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.categoryID, "", new { @class = "text-danger" })
-            </div>
+            <select class="form-control" data-toggle="select" id="categoryID" name="categoryID" style="height:36px;font-size:small; font-style:italic;">
+                <option selected="" value="">Manufacturer Name </option>
+                @{
+                    if (ViewBag.Hos != null)
+                    {
+                        foreach (var hh in ViewBag.Hos)
+                        {
+                            <option value=@hh.id>@hh.Manufacturer</option>
+                        }
+                    }
+                }
+            </select>
+
+            @*@Html.LabelFor(model => model.categoryID, htmlAttributes: new { @class = "control-label col-md-2" })*@
+            
+                @*@Html.EditorFor(model => model.categoryID, new { htmlAttributes = new { @class = "form-control" } })*@
+            @Html.ValidationMessageFor(model => model.categoryID, "", new { @class = "text-danger" })
+           
         </div>
 
         <div class="form-group">
@@ -116,81 +130,191 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.RAMid, htmlAttributes: new { @class = "control-label col-md-2" })
+            <select class="form-control" data-toggle="select" id="RAMid" name="RAMid" style="height:36px;font-size:small; font-style:italic;">
+                <option selected="" value=""> RAM </option>
+                @{
+                    if (ViewBag.rms != null)
+                    {
+                        foreach (var hh in ViewBag.rms)
+                        {
+                            <option value=@hh.Id>@hh.Capacity</option>
+                        }
+                    }
+                }
+            </select>
             <div class="col-md-10">
-                @Html.EditorFor(model => model.RAMid, new { htmlAttributes = new { @class = "form-control" } })
+                @*Html.EditorFor(model => model.RAMid, new { htmlAttributes = new { @class = "form-control" } })*@
                 @Html.ValidationMessageFor(model => model.RAMid, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.BcamId, htmlAttributes: new { @class = "control-label col-md-2" })
+            <select class="form-control" data-toggle="select" id="BcamId" name="BcamId" style="height:36px;font-size:small; font-style:italic;">
+                <option selected="" value=""> BackCamera </option>
+                @{
+                    if (ViewBag.bcam != null)
+                    {
+                        foreach (var hh in ViewBag.bcam)
+                        {
+                            <option value=@hh.Id>@hh.Pixel</option>
+                        }
+                    }
+                }
+            </select>
             <div class="col-md-10">
-                @Html.EditorFor(model => model.BcamId, new { htmlAttributes = new { @class = "form-control" } })
+                @*@Html.EditorFor(model => model.BcamId, new { htmlAttributes = new { @class = "form-control" } })*@
                 @Html.ValidationMessageFor(model => model.BcamId, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.FcamId, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.FcamId, new { htmlAttributes = new { @class = "form-control" } })
+            <select class="form-control" data-toggle="select" id="FcamId" name="FcamId" style="height:36px;font-size:small; font-style:italic;">
+                <option selected="" value=""> FrontCamera </option>
+                @{
+                    if (ViewBag.cam != null)
+                    {
+                        foreach (var hh in ViewBag.cam)
+                        {
+                            <option value=@hh.Id>@hh.Pixel</option>
+                        }
+                    }
+                }
+            </select>
+            
+                @*@Html.EditorFor(model => model.FcamId, new { htmlAttributes = new { @class = "form-control" } })*@
                 @Html.ValidationMessageFor(model => model.FcamId, "", new { @class = "text-danger" })
-            </div>
+            
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.DPT_Id, htmlAttributes: new { @class = "control-label col-md-2" })
+            <select class="form-control" data-toggle="select" id="DPT_Id" name="DPT_Id" style="height:36px;font-size:small; font-style:italic;">
+                <option selected="" value=""> Display </option>
+                @{
+                    if (ViewBag.dis != null)
+                    {
+                        foreach (var hh in ViewBag.dis)
+                        {
+                            <option value=@hh.id>@hh.Technology</option>
+                        }
+                    }
+                }
+            </select>
             <div class="col-md-10">
-                @Html.EditorFor(model => model.DPT_Id, new { htmlAttributes = new { @class = "form-control" } })
+                @*@Html.EditorFor(model => model.DPT_Id, new { htmlAttributes = new { @class = "form-control" } })*@
                 @Html.ValidationMessageFor(model => model.DPT_Id, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.USB_Id, htmlAttributes: new { @class = "control-label col-md-2" })
+            <select class="form-control" data-toggle="select" id="USB_Id" name="USB_Id" style="height:36px;font-size:small; font-style:italic;">
+                <option selected="" value=""> Browser </option>
+                @{
+                    if (ViewBag.usbs != null)
+                    {
+                        foreach (var hh in ViewBag.usbs)
+                        {
+                            <option value=@hh.id>@hh.Type</option>
+                        }
+                    }
+                }
+            </select>
             <div class="col-md-10">
-                @Html.EditorFor(model => model.USB_Id, new { htmlAttributes = new { @class = "form-control" } })
+                @*@Html.EditorFor(model => model.USB_Id, new { htmlAttributes = new { @class = "form-control" } })*@
                 @Html.ValidationMessageFor(model => model.USB_Id, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.OS_Id, htmlAttributes: new { @class = "control-label col-md-2" })
+            <select class="form-control" data-toggle="select" id="OS_Id" name="OS_Id" style="height:36px;font-size:small; font-style:italic;">
+                <option selected="" value=""> Operating System </option>
+                @{
+                    if (ViewBag.ops != null)
+                    {
+                        foreach (var hh in ViewBag.ops)
+                        {
+                            <option value=@hh.Id>@hh.OS</option>
+                        }
+                    }
+                }
+            </select>
             <div class="col-md-10">
-                @Html.EditorFor(model => model.OS_Id, new { htmlAttributes = new { @class = "form-control" } })
+                @*@Html.EditorFor(model => model.OS_Id, new { htmlAttributes = new { @class = "form-control" } })*@
                 @Html.ValidationMessageFor(model => model.OS_Id, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.ROM_Id, htmlAttributes: new { @class = "control-label col-md-2" })
+            <select class="form-control" data-toggle="select" id="ROM_Id" name="ROM_Id" style="height:36px;font-size:small; font-style:italic;">
+                <option selected="" value=""> ROM </option>
+                @{
+                    if (ViewBag.roms != null)
+                    {
+                        foreach (var hh in ViewBag.roms)
+                        {
+                            <option value=@hh.id>@hh.ROM1</option>
+                        }
+                    }
+                }
+            </select>
             <div class="col-md-10">
-                @Html.EditorFor(model => model.ROM_Id, new { htmlAttributes = new { @class = "form-control" } })
+                @*@Html.EditorFor(model => model.ROM_Id, new { htmlAttributes = new { @class = "form-control" } })*@
                 @Html.ValidationMessageFor(model => model.ROM_Id, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.Connectivity_Id, htmlAttributes: new { @class = "control-label col-md-2" })
+            <select class="form-control" data-toggle="select" id="Connectivity_Id" name="Connectivity_Id" style="height:36px ;font-size:small; font-style:italic; width:50px ">
+                <option selected="" value=""> Connectitivity </option>
+                @{
+                    if (ViewBag.cnc != null)
+                    {
+                        foreach (var hh in ViewBag.cnc)
+                        {
+                            <option value=@hh.id>@hh.C3G_Band</option>
+                        }
+                    }
+                }
+            </select>
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Connectivity_Id, new { htmlAttributes = new { @class = "form-control" } })
+                @*@Html.EditorFor(model => model.Connectivity_Id, new { htmlAttributes = new { @class = "form-control" } })*@
                 @Html.ValidationMessageFor(model => model.Connectivity_Id, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.Processor_Id, htmlAttributes: new { @class = "control-label col-md-2" })
+            <select class="form-control" data-toggle="select" id="Processor_Id" name="Processor_Id" style="height:36px;font-size:small; font-style:italic;">
+                <option selected="" value=""> Processor </option>
+                @{
+                    if (ViewBag.pro != null)
+                    {
+                        foreach (var hh in ViewBag.pro)
+                        {
+                            <option value=@hh.Id>@hh.CPU</option>
+                        }
+                    }
+                }
+            </select>
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Processor_Id, new { htmlAttributes = new { @class = "form-control" } })
+                @*@Html.EditorFor(model => model.Processor_Id, new { htmlAttributes = new { @class = "form-control" } })*@
                 @Html.ValidationMessageFor(model => model.Processor_Id, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.Browser_Id, htmlAttributes: new { @class = "control-label col-md-2" })
+            <select class="form-control" data-toggle="select" id="Browser_Id" name="Browser_Id" style="height:36px;font-size:small; font-style:italic;">
+                <option selected="" value=""> Browser </option>
+                @{
+                    if (ViewBag.brw != null)
+                    {
+                        foreach (var hh in ViewBag.brw)
+                        {
+                            <option value=@hh.id>@hh.Type</option>
+                        }
+                    }
+                }
+            </select>
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Browser_Id, new { htmlAttributes = new { @class = "form-control" } })
+                @*@Html.EditorFor(model => model.Browser_Id, new { htmlAttributes = new { @class = "form-control" } })*@
                 @Html.ValidationMessageFor(model => model.Browser_Id, "", new { @class = "text-danger" })
             </div>
         </div>

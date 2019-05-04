@@ -185,5 +185,95 @@
         <ScalarProperty Name="Id" ColumnName="UserId" />
       </EndProperty>
     </AssociationSetMapping>
+    <EntitySetMapping Name="By_Brands">
+      <EntityTypeMapping TypeName="dtbs15Model.By_Brand">
+        <MappingFragment StoreEntitySet="By Brand">
+          <ScalarProperty Name="Manufacturer" ColumnName="Manufacturer" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Price_60000">
+      <EntityTypeMapping TypeName="dtbs15Model.Price_60000">
+        <MappingFragment StoreEntitySet="Price&lt;60000">
+          <ScalarProperty Name="ROM" ColumnName="ROM" />
+          <ScalarProperty Name="Manufacturer" ColumnName="Manufacturer" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="View_Name">
+      <EntityTypeMapping TypeName="dtbs15Model.View_Name">
+        <MappingFragment StoreEntitySet="View_Name">
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BY_BackCamera">
+      <EntityTypeMapping TypeName="dtbs15Model.BY_BackCamera">
+        <MappingFragment StoreEntitySet="BY_BackCamera">
+          <ScalarProperty Name="Pixel" ColumnName="Pixel" />
+          <ScalarProperty Name="Capacity" ColumnName="Capacity" />
+          <ScalarProperty Name="Manufacturer" ColumnName="Manufacturer" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BY_BackCamera16MP">
+      <EntityTypeMapping TypeName="dtbs15Model.BY_BackCamera16MP">
+        <MappingFragment StoreEntitySet="BY_BackCamera16MP">
+          <ScalarProperty Name="Pixel" ColumnName="Pixel" />
+          <ScalarProperty Name="Capacity" ColumnName="Capacity" />
+          <ScalarProperty Name="Manufacturer" ColumnName="Manufacturer" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="By_Browser">
+      <EntityTypeMapping TypeName="dtbs15Model.By_Browser">
+        <MappingFragment StoreEntitySet="By_Browser">
+          <ScalarProperty Name="Manufacturer" ColumnName="Manufacturer" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="By_Display">
+      <EntityTypeMapping TypeName="dtbs15Model.By_Display">
+        <MappingFragment StoreEntitySet="By_Display">
+          <ScalarProperty Name="Manufacturer" ColumnName="Manufacturer" />
+          <ScalarProperty Name="Technology" ColumnName="Technology" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="By_OS">
+      <EntityTypeMapping TypeName="dtbs15Model.By_OS">
+        <MappingFragment StoreEntitySet="By_OS">
+          <ScalarProperty Name="Manufacturer" ColumnName="Manufacturer" />
+          <ScalarProperty Name="OS" ColumnName="OS" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BY_RAM">
+      <EntityTypeMapping TypeName="dtbs15Model.BY_RAM">
+        <MappingFragment StoreEntitySet="BY_RAM">
+          <ScalarProperty Name="Manufacturer" ColumnName="Manufacturer" />
+          <ScalarProperty Name="OS" ColumnName="OS" />
+          <ScalarProperty Name="Capacity" ColumnName="Capacity" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

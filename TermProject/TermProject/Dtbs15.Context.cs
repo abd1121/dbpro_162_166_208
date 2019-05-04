@@ -42,5 +42,14 @@ namespace TermProject
         public virtual DbSet<RAM> RAMs { get; set; }
         public virtual DbSet<ROM> ROMs { get; set; }
         public virtual DbSet<USB> USBs { get; set; }
+        public virtual DbSet<By_Brand> By_Brands { get; set; }
+        public virtual DbSet<Price_60000> Price_60000 { get; set; }
+        public virtual DbSet<View_Name> View_Name { get; set; }
+        public virtual DbSet<BY_BackCamera> BY_BackCamera { get; set; }
+        public virtual DbSet<BY_BackCamera16MP> BY_BackCamera16MP { get; set; }
+        public virtual DbSet<By_Browser> By_Browser { get; set; }
+        public virtual DbSet<By_Display> By_Display { get; set; }
+        public virtual DbSet<By_OS> By_OS { get; set; }
+        public virtual DbSet<BY_RAM> BY_RAM { get; set; }
     }
 }

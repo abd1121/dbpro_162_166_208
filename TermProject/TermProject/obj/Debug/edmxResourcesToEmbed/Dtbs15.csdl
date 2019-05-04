@@ -141,7 +141,7 @@
     <Property Name="Resolution" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="CardSupport" Type="Boolean" Nullable="false" />
     <Property Name="Price" Type="Int32" Nullable="false" />
-    <Property Name="Image1" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+    <Property Name="Image1" Type="Binary" MaxLength="Max" FixedLength="false" />
     <Property Name="Image2" Type="Binary" MaxLength="Max" FixedLength="false" />
     <Property Name="Image3" Type="Binary" MaxLength="Max" FixedLength="false" />
     <Property Name="RamId" Type="Int32" Nullable="false" />
@@ -428,5 +428,119 @@
       <End Role="AspNetRoles" EntitySet="AspNetRoles" />
       <End Role="AspNetUsers" EntitySet="AspNetUsers" />
     </AssociationSet>
+    <EntitySet Name="By_Brands" EntityType="dtbs15Model.By_Brand" />
+    <EntitySet Name="Price_60000" EntityType="dtbs15Model.Price_60000" />
+    <EntitySet Name="View_Name" EntityType="dtbs15Model.View_Name" />
+    <EntitySet Name="BY_BackCamera" EntityType="dtbs15Model.BY_BackCamera" />
+    <EntitySet Name="BY_BackCamera16MP" EntityType="dtbs15Model.BY_BackCamera16MP" />
+    <EntitySet Name="By_Browser" EntityType="dtbs15Model.By_Browser" />
+    <EntitySet Name="By_Display" EntityType="dtbs15Model.By_Display" />
+    <EntitySet Name="By_OS" EntityType="dtbs15Model.By_OS" />
+    <EntitySet Name="BY_RAM" EntityType="dtbs15Model.BY_RAM" />
   </EntityContainer>
+  <EntityType Name="By_Brand">
+    <Key>
+      <PropertyRef Name="Name" />
+      <PropertyRef Name="Price" />
+      <PropertyRef Name="Manufacturer" />
+    </Key>
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Price" Type="Int32" Nullable="false" />
+    <Property Name="Manufacturer" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Price_60000">
+    <Key>
+      <PropertyRef Name="Name" />
+      <PropertyRef Name="Price" />
+      <PropertyRef Name="Manufacturer" />
+      <PropertyRef Name="ROM" />
+    </Key>
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Price" Type="Int32" Nullable="false" />
+    <Property Name="Manufacturer" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ROM" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="View_Name">
+    <Key>
+      <PropertyRef Name="Name" />
+      <PropertyRef Name="Price" />
+    </Key>
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Price" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BY_BackCamera">
+    <Key>
+      <PropertyRef Name="Name" />
+      <PropertyRef Name="Price" />
+      <PropertyRef Name="Manufacturer" />
+      <PropertyRef Name="Capacity" />
+    </Key>
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Price" Type="Int32" Nullable="false" />
+    <Property Name="Manufacturer" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Capacity" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Pixel" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="BY_BackCamera16MP">
+    <Key>
+      <PropertyRef Name="Name" />
+      <PropertyRef Name="Price" />
+      <PropertyRef Name="Manufacturer" />
+      <PropertyRef Name="Capacity" />
+    </Key>
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Price" Type="Int32" Nullable="false" />
+    <Property Name="Manufacturer" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Capacity" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Pixel" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="By_Browser">
+    <Key>
+      <PropertyRef Name="name" />
+      <PropertyRef Name="price" />
+      <PropertyRef Name="Type" />
+      <PropertyRef Name="Manufacturer" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="price" Type="Int32" Nullable="false" />
+    <Property Name="Type" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Manufacturer" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="By_Display">
+    <Key>
+      <PropertyRef Name="name" />
+      <PropertyRef Name="price" />
+      <PropertyRef Name="Manufacturer" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="price" Type="Int32" Nullable="false" />
+    <Property Name="Technology" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Manufacturer" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="By_OS">
+    <Key>
+      <PropertyRef Name="name" />
+      <PropertyRef Name="price" />
+      <PropertyRef Name="OS" />
+      <PropertyRef Name="Manufacturer" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="price" Type="Int32" Nullable="false" />
+    <Property Name="OS" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Manufacturer" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="BY_RAM">
+    <Key>
+      <PropertyRef Name="Name" />
+      <PropertyRef Name="Price" />
+      <PropertyRef Name="Capacity" />
+      <PropertyRef Name="OS" />
+      <PropertyRef Name="Manufacturer" />
+    </Key>
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Price" Type="Int32" Nullable="false" />
+    <Property Name="Capacity" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="OS" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Manufacturer" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
 </Schema>
