@@ -140,7 +140,7 @@
           <Property Name="Resolution" Type="nvarchar(max)" Nullable="false" />
           <Property Name="CardSupport" Type="bit" Nullable="false" />
           <Property Name="Price" Type="int" Nullable="false" />
-          <Property Name="Image1" Type="image" Nullable="false" />
+          <Property Name="Image1" Type="image" />
           <Property Name="Image2" Type="image" />
           <Property Name="Image3" Type="image" />
           <Property Name="RamId" Type="int" Nullable="false" />
@@ -174,6 +174,129 @@
           </Key>
           <Property Name="id" Type="int" Nullable="false" />
           <Property Name="Type" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'dtbs15.dbo.By Brand' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="By Brand">
+          <Key>
+            <PropertyRef Name="Name" />
+            <PropertyRef Name="Price" />
+            <PropertyRef Name="Manufacturer" />
+          </Key>
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Price" Type="int" Nullable="false" />
+          <Property Name="Manufacturer" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'dtbs15.dbo.BY_BackCamera' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="BY_BackCamera">
+          <Key>
+            <PropertyRef Name="Name" />
+            <PropertyRef Name="Price" />
+            <PropertyRef Name="Manufacturer" />
+            <PropertyRef Name="Capacity" />
+          </Key>
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Price" Type="int" Nullable="false" />
+          <Property Name="Manufacturer" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Capacity" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Pixel" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'dtbs15.dbo.BY_BackCamera16MP' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="BY_BackCamera16MP">
+          <Key>
+            <PropertyRef Name="Name" />
+            <PropertyRef Name="Price" />
+            <PropertyRef Name="Manufacturer" />
+            <PropertyRef Name="Capacity" />
+          </Key>
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Price" Type="int" Nullable="false" />
+          <Property Name="Manufacturer" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Capacity" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Pixel" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'dtbs15.dbo.By_Browser' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="By_Browser">
+          <Key>
+            <PropertyRef Name="name" />
+            <PropertyRef Name="price" />
+            <PropertyRef Name="Type" />
+            <PropertyRef Name="Manufacturer" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="price" Type="int" Nullable="false" />
+          <Property Name="Type" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Manufacturer" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'dtbs15.dbo.By_Display' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="By_Display">
+          <Key>
+            <PropertyRef Name="name" />
+            <PropertyRef Name="price" />
+            <PropertyRef Name="Manufacturer" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="price" Type="int" Nullable="false" />
+          <Property Name="Technology" Type="nvarchar" MaxLength="50" />
+          <Property Name="Manufacturer" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'dtbs15.dbo.By_OS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="By_OS">
+          <Key>
+            <PropertyRef Name="name" />
+            <PropertyRef Name="price" />
+            <PropertyRef Name="OS" />
+            <PropertyRef Name="Manufacturer" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="price" Type="int" Nullable="false" />
+          <Property Name="OS" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Manufacturer" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'dtbs15.dbo.BY_RAM' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="BY_RAM">
+          <Key>
+            <PropertyRef Name="Name" />
+            <PropertyRef Name="Price" />
+            <PropertyRef Name="Capacity" />
+            <PropertyRef Name="OS" />
+            <PropertyRef Name="Manufacturer" />
+          </Key>
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Price" Type="int" Nullable="false" />
+          <Property Name="Capacity" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="OS" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Manufacturer" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'dtbs15.dbo.Price<60000' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Price&lt;60000">
+          <Key>
+            <PropertyRef Name="Name" />
+            <PropertyRef Name="Price" />
+            <PropertyRef Name="Manufacturer" />
+            <PropertyRef Name="ROM" />
+          </Key>
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Price" Type="int" Nullable="false" />
+          <Property Name="Manufacturer" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ROM" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'dtbs15.dbo.View_Name' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="View_Name">
+          <Key>
+            <PropertyRef Name="Name" />
+            <PropertyRef Name="Price" />
+          </Key>
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Price" Type="int" Nullable="false" />
         </EntityType>
         <Association Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
           <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
@@ -382,6 +505,78 @@
           <EntitySet Name="RAM" EntityType="Self.RAM" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ROM" EntityType="Self.ROM" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="USB" EntityType="Self.USB" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="By Brand" EntityType="Self.By Brand" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [By Brand].[Name] AS [Name], 
+    [By Brand].[Price] AS [Price], 
+    [By Brand].[Manufacturer] AS [Manufacturer]
+    FROM [dbo].[By Brand] AS [By Brand]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="BY_BackCamera" EntityType="Self.BY_BackCamera" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [BY_BackCamera].[Name] AS [Name], 
+    [BY_BackCamera].[Price] AS [Price], 
+    [BY_BackCamera].[Manufacturer] AS [Manufacturer], 
+    [BY_BackCamera].[Capacity] AS [Capacity], 
+    [BY_BackCamera].[Pixel] AS [Pixel]
+    FROM [dbo].[BY_BackCamera] AS [BY_BackCamera]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="BY_BackCamera16MP" EntityType="Self.BY_BackCamera16MP" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [BY_BackCamera16MP].[Name] AS [Name], 
+    [BY_BackCamera16MP].[Price] AS [Price], 
+    [BY_BackCamera16MP].[Manufacturer] AS [Manufacturer], 
+    [BY_BackCamera16MP].[Capacity] AS [Capacity], 
+    [BY_BackCamera16MP].[Pixel] AS [Pixel]
+    FROM [dbo].[BY_BackCamera16MP] AS [BY_BackCamera16MP]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="By_Browser" EntityType="Self.By_Browser" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [By_Browser].[name] AS [name], 
+    [By_Browser].[price] AS [price], 
+    [By_Browser].[Type] AS [Type], 
+    [By_Browser].[Manufacturer] AS [Manufacturer]
+    FROM [dbo].[By_Browser] AS [By_Browser]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="By_Display" EntityType="Self.By_Display" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [By_Display].[name] AS [name], 
+    [By_Display].[price] AS [price], 
+    [By_Display].[Technology] AS [Technology], 
+    [By_Display].[Manufacturer] AS [Manufacturer]
+    FROM [dbo].[By_Display] AS [By_Display]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="By_OS" EntityType="Self.By_OS" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [By_OS].[name] AS [name], 
+    [By_OS].[price] AS [price], 
+    [By_OS].[OS] AS [OS], 
+    [By_OS].[Manufacturer] AS [Manufacturer]
+    FROM [dbo].[By_OS] AS [By_OS]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="BY_RAM" EntityType="Self.BY_RAM" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [BY_RAM].[Name] AS [Name], 
+    [BY_RAM].[Price] AS [Price], 
+    [BY_RAM].[Capacity] AS [Capacity], 
+    [BY_RAM].[OS] AS [OS], 
+    [BY_RAM].[Manufacturer] AS [Manufacturer]
+    FROM [dbo].[BY_RAM] AS [BY_RAM]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Price&lt;60000" EntityType="Self.Price&lt;60000" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Price&lt;60000].[Name] AS [Name], 
+    [Price&lt;60000].[Price] AS [Price], 
+    [Price&lt;60000].[Manufacturer] AS [Manufacturer], 
+    [Price&lt;60000].[ROM] AS [ROM]
+    FROM [dbo].[Price&lt;60000] AS [Price&lt;60000]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="View_Name" EntityType="Self.View_Name" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [View_Name].[Name] AS [Name], 
+    [View_Name].[Price] AS [Price]
+    FROM [dbo].[View_Name] AS [View_Name]</DefiningQuery>
+          </EntitySet>
           <AssociationSet Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
             <End Role="AspNetUsers" EntitySet="AspNetUsers" />
             <End Role="AspNetUserClaims" EntitySet="AspNetUserClaims" />
@@ -588,7 +783,7 @@
           <Property Name="Resolution" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="CardSupport" Type="Boolean" Nullable="false" />
           <Property Name="Price" Type="Int32" Nullable="false" />
-          <Property Name="Image1" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+          <Property Name="Image1" Type="Binary" MaxLength="Max" FixedLength="false" />
           <Property Name="Image2" Type="Binary" MaxLength="Max" FixedLength="false" />
           <Property Name="Image3" Type="Binary" MaxLength="Max" FixedLength="false" />
           <Property Name="RamId" Type="Int32" Nullable="false" />
@@ -875,7 +1070,121 @@
             <End Role="AspNetRoles" EntitySet="AspNetRoles" />
             <End Role="AspNetUsers" EntitySet="AspNetUsers" />
           </AssociationSet>
+          <EntitySet Name="By_Brands" EntityType="dtbs15Model.By_Brand" />
+          <EntitySet Name="Price_60000" EntityType="dtbs15Model.Price_60000" />
+          <EntitySet Name="View_Name" EntityType="dtbs15Model.View_Name" />
+          <EntitySet Name="BY_BackCamera" EntityType="dtbs15Model.BY_BackCamera" />
+          <EntitySet Name="BY_BackCamera16MP" EntityType="dtbs15Model.BY_BackCamera16MP" />
+          <EntitySet Name="By_Browser" EntityType="dtbs15Model.By_Browser" />
+          <EntitySet Name="By_Display" EntityType="dtbs15Model.By_Display" />
+          <EntitySet Name="By_OS" EntityType="dtbs15Model.By_OS" />
+          <EntitySet Name="BY_RAM" EntityType="dtbs15Model.BY_RAM" />
         </EntityContainer>
+        <EntityType Name="By_Brand">
+          <Key>
+            <PropertyRef Name="Name" />
+            <PropertyRef Name="Price" />
+            <PropertyRef Name="Manufacturer" />
+          </Key>
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Price" Type="Int32" Nullable="false" />
+          <Property Name="Manufacturer" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Price_60000">
+          <Key>
+            <PropertyRef Name="Name" />
+            <PropertyRef Name="Price" />
+            <PropertyRef Name="Manufacturer" />
+            <PropertyRef Name="ROM" />
+          </Key>
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Price" Type="Int32" Nullable="false" />
+          <Property Name="Manufacturer" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ROM" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="View_Name">
+          <Key>
+            <PropertyRef Name="Name" />
+            <PropertyRef Name="Price" />
+          </Key>
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Price" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="BY_BackCamera">
+          <Key>
+            <PropertyRef Name="Name" />
+            <PropertyRef Name="Price" />
+            <PropertyRef Name="Manufacturer" />
+            <PropertyRef Name="Capacity" />
+          </Key>
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Price" Type="Int32" Nullable="false" />
+          <Property Name="Manufacturer" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Capacity" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Pixel" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="BY_BackCamera16MP">
+          <Key>
+            <PropertyRef Name="Name" />
+            <PropertyRef Name="Price" />
+            <PropertyRef Name="Manufacturer" />
+            <PropertyRef Name="Capacity" />
+          </Key>
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Price" Type="Int32" Nullable="false" />
+          <Property Name="Manufacturer" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Capacity" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Pixel" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="By_Browser">
+          <Key>
+            <PropertyRef Name="name" />
+            <PropertyRef Name="price" />
+            <PropertyRef Name="Type" />
+            <PropertyRef Name="Manufacturer" />
+          </Key>
+          <Property Name="name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="price" Type="Int32" Nullable="false" />
+          <Property Name="Type" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Manufacturer" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="By_Display">
+          <Key>
+            <PropertyRef Name="name" />
+            <PropertyRef Name="price" />
+            <PropertyRef Name="Manufacturer" />
+          </Key>
+          <Property Name="name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="price" Type="Int32" Nullable="false" />
+          <Property Name="Technology" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Manufacturer" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="By_OS">
+          <Key>
+            <PropertyRef Name="name" />
+            <PropertyRef Name="price" />
+            <PropertyRef Name="OS" />
+            <PropertyRef Name="Manufacturer" />
+          </Key>
+          <Property Name="name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="price" Type="Int32" Nullable="false" />
+          <Property Name="OS" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Manufacturer" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="BY_RAM">
+          <Key>
+            <PropertyRef Name="Name" />
+            <PropertyRef Name="Price" />
+            <PropertyRef Name="Capacity" />
+            <PropertyRef Name="OS" />
+            <PropertyRef Name="Manufacturer" />
+          </Key>
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Price" Type="Int32" Nullable="false" />
+          <Property Name="Capacity" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="OS" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Manufacturer" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1066,6 +1375,96 @@
               <ScalarProperty Name="Id" ColumnName="UserId" />
             </EndProperty>
           </AssociationSetMapping>
+          <EntitySetMapping Name="By_Brands">
+            <EntityTypeMapping TypeName="dtbs15Model.By_Brand">
+              <MappingFragment StoreEntitySet="By Brand">
+                <ScalarProperty Name="Manufacturer" ColumnName="Manufacturer" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Price_60000">
+            <EntityTypeMapping TypeName="dtbs15Model.Price_60000">
+              <MappingFragment StoreEntitySet="Price&lt;60000">
+                <ScalarProperty Name="ROM" ColumnName="ROM" />
+                <ScalarProperty Name="Manufacturer" ColumnName="Manufacturer" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="View_Name">
+            <EntityTypeMapping TypeName="dtbs15Model.View_Name">
+              <MappingFragment StoreEntitySet="View_Name">
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BY_BackCamera">
+            <EntityTypeMapping TypeName="dtbs15Model.BY_BackCamera">
+              <MappingFragment StoreEntitySet="BY_BackCamera">
+                <ScalarProperty Name="Pixel" ColumnName="Pixel" />
+                <ScalarProperty Name="Capacity" ColumnName="Capacity" />
+                <ScalarProperty Name="Manufacturer" ColumnName="Manufacturer" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BY_BackCamera16MP">
+            <EntityTypeMapping TypeName="dtbs15Model.BY_BackCamera16MP">
+              <MappingFragment StoreEntitySet="BY_BackCamera16MP">
+                <ScalarProperty Name="Pixel" ColumnName="Pixel" />
+                <ScalarProperty Name="Capacity" ColumnName="Capacity" />
+                <ScalarProperty Name="Manufacturer" ColumnName="Manufacturer" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="By_Browser">
+            <EntityTypeMapping TypeName="dtbs15Model.By_Browser">
+              <MappingFragment StoreEntitySet="By_Browser">
+                <ScalarProperty Name="Manufacturer" ColumnName="Manufacturer" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="By_Display">
+            <EntityTypeMapping TypeName="dtbs15Model.By_Display">
+              <MappingFragment StoreEntitySet="By_Display">
+                <ScalarProperty Name="Manufacturer" ColumnName="Manufacturer" />
+                <ScalarProperty Name="Technology" ColumnName="Technology" />
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="By_OS">
+            <EntityTypeMapping TypeName="dtbs15Model.By_OS">
+              <MappingFragment StoreEntitySet="By_OS">
+                <ScalarProperty Name="Manufacturer" ColumnName="Manufacturer" />
+                <ScalarProperty Name="OS" ColumnName="OS" />
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BY_RAM">
+            <EntityTypeMapping TypeName="dtbs15Model.BY_RAM">
+              <MappingFragment StoreEntitySet="BY_RAM">
+                <ScalarProperty Name="Manufacturer" ColumnName="Manufacturer" />
+                <ScalarProperty Name="OS" ColumnName="OS" />
+                <ScalarProperty Name="Capacity" ColumnName="Capacity" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
